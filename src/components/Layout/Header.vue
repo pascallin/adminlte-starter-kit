@@ -17,6 +17,10 @@
         <span class="icon-bar"></span>
       </a>
 
+      <ul class="nav navbar-nav">
+        <li><a v-link="{ path: '/page' }">Page</a></li>
+      </ul>
+
       <div class="navbar-custom-menu">
         <ul class="nav navbar-nav">
           <!-- User Account: style can be found in dropdown.less -->

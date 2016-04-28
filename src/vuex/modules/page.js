@@ -1,5 +1,5 @@
 import {
-  RECEIVE_TASK
+  RECEIVE_LIST
 } from '../mutation-types'
 
 //initial state
@@ -9,8 +9,8 @@ const state = {
 
 // mutations
 const mutations = {
-  RECEIVE_TASK (state, tasks) {
-    state.all = tasks;
+  RECEIVE_LIST (state, data) {
+    state.all = data;
   }
 };
 

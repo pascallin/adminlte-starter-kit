@@ -1,4 +1,1 @@
-//task
-export const RECEIVE_TASK = 'RECEIVE_TASK';
-
-//worker
+export const RECEIVE_LIST = 'RECEIVE_LIST';

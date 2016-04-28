@@ -16,7 +16,7 @@
 
   import MainHeader from './components/layout/Header'
   import SideBar from './components/layout/SideBar'
-  import BlankPage from './components/Layout/BlankPage'
+  import BlankPage from './components/Common/BlankPage'
   import MainFooter from './components/layout/Footer'
 
   export default {
