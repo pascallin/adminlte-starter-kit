@@ -13,7 +13,7 @@ module.exports = {
     filename: '[name].js'
   },
   resolve: {
-    extensions: ['', '.js', '.vue','.jsx'],
+    extensions: ['', '.js', '.vue'],
     fallback: [path.join(__dirname, '../node_modules')],
     alias: {
       'src': path.resolve(__dirname, '../src'),
@@ -27,28 +27,22 @@ module.exports = {
   module: {
     loaders: [
       {
-        test: /\.jsx/,
-        loader: 'babel',
-        query: {
-          presets: ['es2015','react'],
-          cacheDirectory: true,
-          plugins: ['syntax-object-rest-spread']
-        }
+        test: /\.vue$/,
+        loader: 'vue'
       },
       {
         test: /\.js$/,
         loader: 'babel',
-        query: {
-          presets: ['es2015','react'],
-          cacheDirectory: true,
-          plugins: ['syntax-object-rest-spread']
-        },
         include: projectRoot,
         exclude: /node_modules/
       },
       {
         test: /\.json$/,
         loader: 'json'
+      },
+      {
+        test: /\.html$/,
+        loader: 'vue-html'
       },
       {
         test: /\.(png|jpe?g|gif|svg|woff2?|eot|ttf|otf)(\?.*)?$/,
@@ -59,5 +53,8 @@ module.exports = {
         }
       }
     ]
+  },
+  vue: {
+    loaders: utils.cssLoaders()
   }
 }

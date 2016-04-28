@@ -1,20 +1,11 @@
-import { render } from 'react-dom'
-import React from 'react'
+import Vue from 'vue'
+import VueRouter  from 'vue-router'
+import routerMap from './router'
+import App from './App'
 
-import configureStore from './redux/store'
-const store = configureStore();
-import { Router, Route, IndexRoute, browserHistory } from 'react-router'
-import { syncHistoryWithStore } from 'react-router-redux'
-// Create an enhanced history that syncs navigation events with the store
-const history = syncHistoryWithStore(browserHistory, store);
+Vue.use(VueRouter);
 
-import { Provider } from 'react-redux'
-import routes from './routes'
+const router = new VueRouter();
+routerMap(router);
 
-render(
-  <Provider store={store}>
-    { /* Tell the Router to use our enhanced history */ }
-    <Router history={history} routes={routes} />
-  </Provider>,
-  document.getElementById('app')
-);
+router.start(App, '#app');

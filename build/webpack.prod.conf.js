@@ -16,6 +16,12 @@ module.exports = merge(baseWebpackConfig, {
     filename: utils.assetsPath('[name].[chunkhash].js'),
     chunkFilename: utils.assetsPath('[id].[chunkhash].js')
   },
+  vue: {
+    loaders: utils.cssLoaders({
+      sourceMap: config.build.productionSourceMap,
+      extract: true
+    })
+  },
   plugins: [
     // http://vuejs.github.io/vue-loader/workflow/production.html
     new webpack.DefinePlugin({
