@@ -1,8 +1,4 @@
-import React, { Component, PropTypes } from 'react'
-import { bindActionCreators } from 'redux'
-import { connect } from 'react-redux'
-
-import * as Actions from './redux/actions'
+import React from 'react'
 
 import Header from './components/layout/Header.jsx'
 import Footer from './components/layout/Footer.jsx'
