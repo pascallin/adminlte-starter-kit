@@ -9,17 +9,28 @@
 </template>
 
 <script>
-  import store from './vuex/store';
+import store from './vuex/store'
 
-  import MainHeader from './components/layout/Header'
-  import SideBar from './components/layout/SideBar'
-  import MainFooter from './components/layout/Footer'
+import MainHeader from '@/components/layout/Header'
+import SideBar from '@/components/layout/SideBar'
+import MainFooter from '@/components/layout/Footer'
 
-  export default {
-    name: 'App',
-    store: store,
-    components:{
-      MainHeader,SideBar,MainFooter
-    }
+export default {
+  name: 'App',
+  store: store,
+  components: {
+    MainHeader, SideBar, MainFooter
   }
+}
 </script>
+
+<style>
+#app {
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  margin-top: 60px;
+}
+</style>

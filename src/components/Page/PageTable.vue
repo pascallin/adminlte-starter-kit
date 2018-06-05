@@ -7,11 +7,11 @@
     <div class="box-body">
       <table class="table table-bordered">
         <tr>
-          <th style="width: 10px">#</th>
+          <th>#</th>
           <th>title</th>
-          <th style="width: 40px">operation</th>
+          <th>operation</th>
         </tr>
-        <tr v-for="item in list">
+        <tr v-for="item in list" :key="item.id">
           <td>{{item.id}}.</td>
           <td>{{item.title}}</td>
           <td></td>
@@ -24,22 +24,18 @@
 </template>
 
 <script>
-  import { getList } from '../../vuex/actions'
 
-  export default {
-    vuex: {
-      getters: {
-        list: function({ pageModule }){
-          return pageModule.all
-        }
-      },
-      actions: {
-        getList
-      }
-    },
-    created() {
-      this.getList()
+import { mapState } from 'vuex'
+
+export default {
+  computed: mapState({
+    list: (state) => {
+      return state.page.all
     }
+  }),
+  created () {
+    this.$store.dispatch('page/fetchList')
   }
+}
 
 </script>

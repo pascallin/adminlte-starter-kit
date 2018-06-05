@@ -18,7 +18,9 @@
       </a>
 
       <ul class="nav navbar-nav">
-        <li><a v-link="{ path: '/page' }">Page</a></li>
+        <li>
+          <!-- <router-link to="/">Page</router-link> -->
+        </li>
       </ul>
 
       <div class="navbar-custom-menu">
@@ -70,3 +72,9 @@
     </nav>
   </header>
 </template>
+
+<script>
+export default {
+
+}
+</script>

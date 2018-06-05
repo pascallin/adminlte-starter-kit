@@ -18,13 +18,12 @@
 </template>
 
 <script>
-  import ContentHeader from '../Common/ContentHeader.vue'
-  import PageTable from './PageTable'
+import ContentHeader from '../Common/ContentHeader.vue'
+import PageTable from './PageTable'
 
-  export default {
-    components: {
-      ContentHeader,PageTable
-    }
+export default {
+  components: {
+    ContentHeader, PageTable
   }
-
+}
 </script>
